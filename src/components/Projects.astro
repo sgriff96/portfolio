@@ -1,4 +1,6 @@
 ---
+import ProjectCard from "./ProjectCard.astro";
+
 const projects = [
   {
     label: "Memmy",
@@ -19,12 +21,7 @@ const projects = [
   {
     projects.map((p) => {
       return (
-        <div class="p-4 border-border border rounded-xl flex flex-row gap-4">
-          <a href={p.url} class="text-xl font-bold text-primary">
-            {p.label}
-          </a>
-          <p>{p.description}</p>
-        </div>
+        <ProjectCard title={p.label} url={p.url} description={p.description} />
       );
     })
   }
