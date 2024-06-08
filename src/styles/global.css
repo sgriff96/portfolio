@@ -58,4 +58,10 @@ h1 {
   html {
     @apply font-body;
   }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
 }
