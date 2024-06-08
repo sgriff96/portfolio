@@ -2,14 +2,15 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    colors: {
-      bg: "rgb(var(--bg)  / <alpha-value>)",
-      fg: "rgb(var(--fg)  / <alpha-value>)",
-      border: "rgb(var(--border)  / <alpha-value>)",
-    },
     extend: {
       fontFamily: {
-        body: ["Inter", "sans-serif"],
+        body: ["JetBrains Mono", "monospace"],
+      },
+      colors: {
+        bg: "rgb(var(--bg)  / <alpha-value>)",
+        fg: "rgb(var(--fg)  / <alpha-value>)",
+        border: "rgb(var(--border)  / <alpha-value>)",
+        muted: "rgb(var(--muted)  / <alpha-value>)",
       },
     },
   },

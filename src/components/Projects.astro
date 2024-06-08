@@ -1,0 +1,31 @@
+---
+const projects = [
+  {
+    label: "Memmy",
+    url: "https://github.com/Memmy-App/memmy",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo deleniti doloribus tenetur quia ipsa quas, molestiae obcaecati hic aliquid laudantium odio voluptates praesentium? Possimus incidunt iste perspiciatis earum. Ut.",
+  },
+  {
+    label: "Momentum",
+    url: "https://github.com/sgriff96/momentum",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo deleniti doloribus tenetur quia ipsa quas, molestiae obcaecati hic aliquid laudantium odio voluptates praesentium? Possimus incidunt iste perspiciatis earum. Ut.",
+  },
+];
+---
+
+<div class="flex flex-col gap-4">
+  {
+    projects.map((p) => {
+      return (
+        <div class="p-4 border-border border rounded-xl flex flex-row gap-4">
+          <a href={p.url} class="text-xl font-bold text-primary">
+            {p.label}
+          </a>
+          <p>{p.description}</p>
+        </div>
+      );
+    })
+  }
+</div>

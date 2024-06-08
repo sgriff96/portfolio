@@ -1,5 +1,4 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 const experience = [
   {
     company: "Company A",
@@ -25,16 +24,13 @@ const experience = [
 ];
 ---
 
-<MainLayout>
-  <h2>Experience</h2>
-  {
-    experience.map((e) => (
-      <>
-        <h3>{e.company}</h3>
-        <p>{e.role}</p>
-        <p>{e.date}</p>
-        <p>{e.description}</p>
-      </>
-    ))
-  }
-</MainLayout>
+{
+  experience.map((e) => (
+    <div>
+      <h3>{e.company}</h3>
+      <p>{e.role}</p>
+      <p>{e.date}</p>
+      <p>{e.description}</p>
+    </div>
+  ))
+}

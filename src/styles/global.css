@@ -27,8 +27,9 @@ h1 {
 
 @layer base {
   :root {
-    --bg: 19 0 108;
+    --bg: 46 50 90;
     --fg: 255 255 255;
+    --muted: 198 198 198;
     --border: 255 255 255;
   }
   /* html[data-theme="light"] {
@@ -54,7 +55,7 @@ h1 {
     @apply border-border;
   } */
   body {
-    @apply bg-bg text-fg;
+    @apply bg-emerald-950 text-white;
   }
   html {
     @apply font-body;
