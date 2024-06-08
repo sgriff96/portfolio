@@ -1,18 +1,26 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 
-const projects = [
+type Project = {
+  label: string;
+  github: string;
+  url?: string;
+  description: string;
+};
+
+const projects: Project[] = [
   {
     label: "Memmy",
-    url: "https://github.com/Memmy-App/memmy",
+    github: "https://github.com/Memmy-App/memmy",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo deleniti doloribus tenetur quia ipsa quas, molestiae obcaecati hic aliquid laudantium odio voluptates praesentium? Possimus incidunt iste perspiciatis earum. Ut.",
+      "A React Native mobile client for Lemmy, a federated link aggregator inspired by Reddit.",
   },
   {
     label: "Momentum",
-    url: "https://github.com/sgriff96/momentum",
+    github: "https://github.com/sgriff96/momentum",
+    url: "https://momentum.sgriffin.io",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, explicabo deleniti doloribus tenetur quia ipsa quas, molestiae obcaecati hic aliquid laudantium odio voluptates praesentium? Possimus incidunt iste perspiciatis earum. Ut.",
+      "A habit tracking web application built with SvelteKit, with a focus on the momentum of buiding habits rather than streaks.",
   },
 ];
 ---
@@ -21,7 +29,12 @@ const projects = [
   {
     projects.map((p) => {
       return (
-        <ProjectCard title={p.label} url={p.url} description={p.description} />
+        <ProjectCard
+          title={p.label}
+          github={p.github}
+          url={p.url}
+          description={p.description}
+        />
       );
     })
   }

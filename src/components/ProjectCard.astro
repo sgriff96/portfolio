@@ -1,10 +1,29 @@
 ---
-const { title, description, url } = Astro.props;
+import type { ILink } from "../types/Link";
+import Link from "./Link.astro";
+import LinkGroup from "./LinkGroup.astro";
+const { title, description, url, github } = Astro.props;
+
+const links: ILink[] = [
+  {
+    label: "GitHub",
+    href: github,
+  },
+  ...(url
+    ? [
+        {
+          label: "Demo",
+          href: url,
+        },
+      ]
+    : []),
+];
 ---
 
-<div
-  class="border border-emerald-50 p-4 rounded-xl bg-emerald-900 hover:-translate-y-1 transition-all duration-200"
->
-  <h3>{title}</h3>
+<div class="border border-emerald-50 p-4 rounded-xl bg-emerald-900">
+  <div class="flex flex-row gap-4 justify-between items-center">
+    <h3>{title}</h3>
+    <LinkGroup links={links} />
+  </div>
   <p>{description}</p>
 </div>

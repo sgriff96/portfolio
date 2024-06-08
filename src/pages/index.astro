@@ -1,25 +1,37 @@
 ---
 import Experience from "../components/Experience.astro";
-import Links from "../components/Links.astro";
+import LinkGroup from "../components/LinkGroup.astro";
 import Projects from "../components/Projects.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import type { ILink } from "../types/Link";
+
+const links: ILink[] = [
+  {
+    href: "https://www.linkedin.com/in/sean-griffin-610207118/",
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/sgriff96",
+    label: "GitHub",
+  },
+  {
+    href: "mailto:sean@sgriffin.io",
+    label: "Email",
+  },
+];
 ---
 
 <MainLayout>
   <div class="flex justify-between items-center">
     <h1>Hi, I'm Sean 👁️👄👁️</h1>
-    <Links />
+    <LinkGroup links={links} />
   </div>
 
   <p class="text-emerald-200">
-    I'm a software engineer in the Bay Area. I specialize in <span
-      class="text-pink-500"
-    >
-      Typescript
-    </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-    consectetur, provident voluptates harum eum minima! Recusandae possimus
-    labore omnis aliquid alias? Alias exercitationem pariatur, nulla rem
-    assumenda dolorem ipsam numquam.
+    I'm a software engineer in the Bay Area. I specialize in TypeScript, React,
+    Node.js and AWS. I'm passionate about building beautiful and responsive UIs
+    and scalable web applications. I'm currently working at Aurora Innovation,
+    trying to make self-driving cars a reality.
   </p>
   <h2>Projects</h2>
   <Projects />
