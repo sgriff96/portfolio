@@ -1,12 +1,16 @@
 ---
-import Contact from "../components/Contact.astro";
 import Experience from "../components/Experience.astro";
+import Links from "../components/Links.astro";
 import Projects from "../components/Projects.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <h1>Hi, I'm Sean 👁️👄👁️</h1>
+  <div class="flex justify-between items-center">
+    <h1>Hi, I'm Sean 👁️👄👁️</h1>
+    <Links />
+  </div>
+
   <p class="text-emerald-200">
     I'm a software engineer in the Bay Area. I specialize in <span
       class="text-pink-500"
@@ -21,6 +25,4 @@ import MainLayout from "../layouts/MainLayout.astro";
   <Projects />
   <h2>Experience</h2>
   <Experience />
-  <h2>Contact</h2>
-  <Contact />
 </MainLayout>
