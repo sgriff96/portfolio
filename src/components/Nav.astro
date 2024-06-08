@@ -1,0 +1,20 @@
+---
+const pages = [
+  {
+    label: "Home",
+    url: "/",
+  },
+  {
+    label: "Experience",
+    url: "/experience/",
+  },
+  {
+    label: "Projects",
+    url: "/projects/",
+  },
+];
+---
+
+<div class="p-4 border-border border rounded-xl flex flex-row gap-4">
+  {pages.map((p) => <a href={p.url}>{p.label}</a>)}
+</div>

@@ -29,6 +29,7 @@ h1 {
   :root {
     --bg: 19 0 108;
     --fg: 255 255 255;
+    --border: 255 255 255;
   }
   /* html[data-theme="light"] {
     --color-fill: 251, 254, 251;
