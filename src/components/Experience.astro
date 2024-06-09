@@ -5,21 +5,21 @@ const experience = [
     role: "Software Engineer II",
     date: "June 2022 - Present",
     description:
-      "Developed an internal tool using React, TypeScript, and Node.js to analyze millions of AI simulations daily.",
+      "Developing an internal tool using React, TypeScript, and Node.js to analyze millions of AI simulations daily.",
   },
   {
     company: "Amazon Web Services",
     role: "Software Engineer",
     date: "April 2021 - June 2022",
     description:
-      "Developed fullstack cloud native applications for AWS customers using Angular, React, TypeScript, Python, PostgreSQL and AWS services.",
+      "Worked as a fullstack engineer with AWS expertise building cloud native applications for AWS customers using Angular, React, TypeScript, Python, PostgreSQL and AWS services.",
   },
   {
     company: "Amazon Web Services",
     role: "Technical Account Manager",
     date: "May 2020 - April 2021",
     description:
-      "Developed internal tools for Technical Account Managers and interacted with AWS customers on a daily basis to create solutions for existing problems.",
+      "Created internal tools for Technical Account Managers and interacted with AWS customers on a daily basis to create solutions for existing problems.",
   },
   {
     company: "SHI International Corp",
@@ -34,10 +34,10 @@ const experience = [
 {
   experience.map((e) => (
     <div>
-      <p class="font-bold">{e.company}</p>
-      <div class="flex flex-row justify-between flex-wrap font-light italic">
-        <p>{e.role}</p>
-        <p>{e.date}</p>
+      <h3>{e.company}</h3>
+      <div class="flex flex-row justify-between flex-wrap font-light italic ">
+        <p class="text-sky-300">{e.role}</p>
+        <p class="text-sky-300">{e.date}</p>
       </div>
       <p>{e.description}</p>
     </div>

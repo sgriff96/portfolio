@@ -27,11 +27,11 @@ h1 {
 
 @layer base {
   :root {
-    --bg: 46 50 90;
+    --bg: 78 60 104;
     --fg: 255 255 255;
-    --muted: 198 198 198;
+    --muted: 120 186 255;
     --border: 255 255 255;
-    --accent: 255 107 1;
+    --accent: 255 121 198;
   }
   /* html[data-theme="light"] {
     --color-fill: 251, 254, 251;
@@ -56,10 +56,13 @@ h1 {
     @apply border-border;
   } */
   body {
-    @apply bg-emerald-950 text-white;
+    @apply bg-sky-950 text-white;
   }
   html {
     @apply font-body;
+  }
+  p {
+    @apply text-sky-100;
   }
   h1 {
     @apply text-3xl;
