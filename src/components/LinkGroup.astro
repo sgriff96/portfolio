@@ -8,7 +8,7 @@ interface Props {
 const { links } = Astro.props;
 ---
 
-<div class="flex flex-row items-center gap-2">
+<div class="flex flex-row items-center gap-2 flex-wrap">
   {
     links.map((link, i) => {
       return (
