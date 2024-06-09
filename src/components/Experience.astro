@@ -2,31 +2,42 @@
 const experience = [
   {
     company: "Aurora Innovation",
-    role: "Software Engineer II",
-    date: "June 2022 - Present",
-    description:
-      "Developing an internal tool using React, TypeScript, and Node.js to analyze millions of AI simulations daily.",
+    roles: [
+      {
+        role: "Software Engineer II",
+        date: "June 2022 - Present",
+        description:
+          "Developing an internal tool using React, TypeScript, and Node.js to analyze millions of AI simulations daily.",
+      },
+    ],
   },
   {
     company: "Amazon Web Services",
-    role: "Software Engineer",
-    date: "April 2021 - June 2022",
-    description:
-      "Worked as a fullstack engineer with AWS expertise building cloud native applications for AWS customers using Angular, React, TypeScript, Python, PostgreSQL and AWS services.",
-  },
-  {
-    company: "Amazon Web Services",
-    role: "Technical Account Manager",
-    date: "May 2020 - April 2021",
-    description:
-      "Created internal tools for Technical Account Managers and interacted with AWS customers on a daily basis to create solutions for existing problems.",
+    roles: [
+      {
+        role: "Software Engineer",
+        date: "April 2021 - June 2022",
+        description:
+          "Worked as a fullstack engineer with AWS expertise building cloud native applications for AWS customers using Angular, React, TypeScript, Python, PostgreSQL and AWS services.",
+      },
+      {
+        role: "Technical Account Manager",
+        date: "May 2020 - April 2021",
+        description:
+          "Created internal tools for Technical Account Managers and interacted with AWS customers on a daily basis to create solutions for existing problems.",
+      },
+    ],
   },
   {
     company: "SHI International Corp",
-    role: "Software Engineer",
-    date: "September 2018 - May 2020",
-    description:
-      "Developed responsive cloud native web applications using Angular, Node.js, MySQL and AWS for SHI customers.",
+    roles: [
+      {
+        role: "Software Engineer",
+        date: "September 2018 - May 2020",
+        description:
+          "Developed responsive cloud native web applications using Angular, Node.js, MySQL and AWS for SHI customers.",
+      },
+    ],
   },
 ];
 ---
@@ -34,12 +45,18 @@ const experience = [
 {
   experience.map((e) => (
     <div>
-      <h3>{e.company}</h3>
-      <div class="flex flex-row justify-between flex-wrap font-light italic ">
-        <p class="text-sky-300">{e.role}</p>
-        <p class="text-sky-300">{e.date}</p>
+      <h3 class="pb-1">{e.company}</h3>
+      <div class="flex flex-col gap-2">
+        {e.roles.map((r) => (
+          <div>
+            <div class="flex flex-row justify-between flex-wrap font-light italic ">
+              <p class="text-sky-300">{r.role}</p>
+              <p class="text-sky-300">{r.date}</p>
+            </div>
+            <p>{r.description}</p>
+          </div>
+        ))}
       </div>
-      <p>{e.description}</p>
     </div>
   ))
 }
