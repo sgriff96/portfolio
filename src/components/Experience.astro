@@ -42,21 +42,23 @@ const experience = [
 ];
 ---
 
-{
-  experience.map((e) => (
-    <div>
-      <h3 class="pb-1">{e.company}</h3>
-      <div class="flex flex-col gap-2">
-        {e.roles.map((r) => (
-          <div>
-            <div class="flex flex-row justify-between flex-wrap font-light italic ">
-              <p class="text-sky-300">{r.role}</p>
-              <p class="text-sky-300">{r.date}</p>
+<div class="flex flex-col gap-6">
+  {
+    experience.map((e) => (
+      <div>
+        <h3 class="pb-1">{e.company}</h3>
+        <div class="flex flex-col gap-2">
+          {e.roles.map((r) => (
+            <div>
+              <div class="flex flex-row justify-between flex-wrap font-light italic ">
+                <p class="text-sky-300">{r.role}</p>
+                <p class="text-sky-300">{r.date}</p>
+              </div>
+              <p>{r.description}</p>
             </div>
-            <p>{r.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  ))
-}
+    ))
+  }
+</div>
