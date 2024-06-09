@@ -34,11 +34,11 @@ const experience = [
 {
   experience.map((e) => (
     <div>
-      <div class="flex flex-row justify-between">
-        <p class="font-bold">{e.company}</p>
-        <p class="font-light">{e.date}</p>
+      <p class="font-bold">{e.company}</p>
+      <div class="flex flex-row justify-between flex-wrap font-light italic">
+        <p>{e.role}</p>
+        <p>{e.date}</p>
       </div>
-      <i>{e.role}</i>
       <p>{e.description}</p>
     </div>
   ))
