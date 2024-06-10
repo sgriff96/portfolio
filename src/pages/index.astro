@@ -26,14 +26,21 @@ const links: ILink[] = [
     <h1>Hi, I'm <span class="text-sky-300">Sean</span> 👋</h1>
     <LinkGroup links={links} />
   </div>
-  <p>
-    I'm a software engineer in the Bay Area with over 5 years of experience. I
-    specialize in TypeScript, React, Node.js and AWS. I'm passionate about
-    building beautiful and responsive UIs and scalable web applications. I'm
-    currently working at Aurora Innovation, trying to make self-driving cars a
-    reality. Outside of work, I enjoy playing video games, reading fantasy
-    books, and hiking. I'm also a huge Buffalo Bills fan! Go Bills!
-  </p>
+  <div class="flex flex-row items-center gap-4 flex-wrap md:flex-nowrap">
+    <img
+      src="/seanprofile.jpg"
+      alt="sean griffin profile picture"
+      class="relative inline-block h-32 w-32 rounded-full object-cover object-center"
+    />
+    <p>
+      I'm a software engineer in the Bay Area with over 5 years of experience. I
+      specialize in TypeScript, React, Node.js and AWS. I'm passionate about
+      building beautiful and responsive UIs and scalable web applications. I'm
+      currently working at Aurora Innovation, trying to make self-driving cars a
+      reality. Outside of work, I enjoy playing video games, reading fantasy
+      books, and hiking. I'm also a huge Buffalo Bills fan! Go Bills!
+    </p>
+  </div>
   <h2>Projects</h2>
   <Projects />
   <h2>Experience</h2>
